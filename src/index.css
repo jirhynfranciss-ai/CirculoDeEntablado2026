@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: #2C1810;
+    background-color: #FFF5EE;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .font-playfair {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  }
+
+  /* Smooth scrollbars */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #F5DEB3;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #A0522D;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #8B0000;
+  }
+
+  /* Line clamp utilities */
+  .line-clamp-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+  .line-clamp-4 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+  }
+
+  /* Break inside for masonry layouts */
+  .break-inside-avoid {
+    break-inside: avoid;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-2.5 bg-[#8B0000] text-white rounded font-medium hover:bg-[#6d0000] transition-colors text-sm;
+  }
+  
+  .btn-secondary {
+    @apply px-6 py-2.5 border border-[#8B0000] text-[#8B0000] rounded font-medium hover:bg-[#8B0000] hover:text-white transition-colors text-sm;
+  }
+}
